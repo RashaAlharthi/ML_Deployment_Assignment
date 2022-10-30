@@ -12,7 +12,7 @@
 
 <body>
 
-    <h1>Titanic Gender Prediction</h1>
+    <h1>Garment workers Productivity Prediction</h1>
 
     <p>Enter the feature here</p>
 
@@ -22,59 +22,70 @@
 
         <ul>
           <!-- This is the title for the input-->
-        <li><label for="survived">Survived:</label>
+        <li><label for="date">Date:</label>
+            <input type="text" name="Date" placeholder="Date" required="required" />
 
-        <select id="survived" name="survived" required="required">
-            <!-- This is the hint text-->
-            <option value="">--Please choose an option--</option>
-            <option value="1">Yes</option>
-            <option value="0">No</option>
-        </select></li>
 
 
         <!-- This is the title for the input-->
-        <li><label for="age">Age:</label>
+        <li><label for="quarter">Quarter of the month:</label>
           <!-- placeholder is the hint text-->
-            <input type="text" name="age" placeholder="Age" required="required" />
-        </li>
-
-        <li><label for="sibsp">Number of siblings/spouses:</label>
-            <input type="text" name="sibsp" placeholder="Number between 0 and 5" required="required" />
-        </li>
-
-        <li><label for="parch">Number of parents/children:</label>
-            <input type="text" name="parch" placeholder="Number between 0 and 6" required="required" />
-        </li>
-
-        <li><label for="fare">Fare:</label>
-            <input type="text" name="fare" placeholder="fare" required="required" />
-        </li>
-
-        <li><label for="class">Class:</label>
-        <select id="class" name="class" required="required">
+          <select id="quarter" name="quarter" required="required">
             <option value="">--Please choose an option--</option>
-            <option value="First">First</option>
-            <option value="Second">Second</option>
-            <option value="Third">Third</option>
-        </select></li>
-
-        <li><label for="embark_town">Embark Town:</label>
-            <select id="embark_town" name="embark_town" required="required">
-                <option value="">--Please choose an option--</option>
-                <option value="Southampton">Southampton</option>
-                <option value="Cherbourg">Cherbourg</option>
-                <option value="Queenstown">Queenstown</option>
+            <option value="Quarter 1">First Quarter</option> 
+            <option value="Quarter 2">Second Quarter</option>
+            <option value="Quarter 3">Third Quarter</option>
+            <option value="Quarter 4">Fouth Quarter</option>
             </select>
         </li>
 
+        <!-- This is the title for the input-->
+        <li><label for="department">Associated department Name:</label>
+            <!-- placeholder is the hint text-->
+            <select id="department" name="department" required="required">
+                <option value="">--Please choose an option--</option>
+                <option value="sewing">Sewing</option> 
+                <option value="finishing">Finishing</option>
+                </select>
+            </li>
 
-        <li><label for="alone">Was person alone?:</label>
-        <select id="alone" name="alone" required="required">
-            <option value="">--Please choose an option--</option>
-            <option value="1">Yes</option>
-            <option value="0">No</option>
-        </select></li>
+            <li><label for="day">Day of the Week:</label>
+                <!-- placeholder is the hint text-->
+                <select id="day" name="day" required="required">
+                  <option value="">--Please choose an option--</option>
+                  <option value="Sunday">Sunday</option> 
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Saturday">Saturday</option>
+                  </select>
+              </li>
 
+              <li><label for="team">Associated team number:</label>
+                <!-- placeholder is the hint text-->
+                <select id="team" name="team" required="required">
+                  <option value="">--Please choose an option--</option>
+                  <option value="1">team #1</option> 
+                  <option value="2">team #2</option>
+                  <option value="3">team #3</option>
+                  <option value="4">team #4</option>
+                  <option value="5">team #5</option>
+                  <option value="6">team #6</option>
+                  <option value="7">team #7</option> 
+                  <option value="8">team #8</option>
+                  <option value="9">team #9</option>
+                  <option value="10">team #10</option>
+                  <option value="11">team #11</option>
+                  <option value="12">team #12</option>
+                  </select>
+              </li>
+
+
+        <li><label for="targeted_productivity">Targeted productivity for the day:</label>
+            <input type="number" name="targeted_productivity" placeholder="targeted productivity for the day" required="required" />
+        </li>
+<!-- 9 columns remains from smv to the end-->
         <!-- submit button -->
         <li><button id="submit" type="submit">Predict</button></li>
         </ul>
