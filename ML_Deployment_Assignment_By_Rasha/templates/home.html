@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 
-    <title>Titanic Home</title>
+    <title>Garment workers Home</title>
 </head>
 
 <body>
@@ -21,21 +21,36 @@
         <!-- Input From The User -->
 
         <ul>
-          <!-- This is the title for the input-->
-        <li><label for="date">Date:</label>
-            <input type="text" name="Date" placeholder="Date" required="required" />
 
-
+            <li><label for="month">Month:</label>
+                <!-- placeholder is the hint text-->
+                <select id="month" name="month" required="required">
+                  <option value="">--Please choose an option--</option>
+                  <option value="January">January</option> 
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
+                  </select>
+            </li>
 
         <!-- This is the title for the input-->
         <li><label for="quarter">Quarter of the month:</label>
           <!-- placeholder is the hint text-->
           <select id="quarter" name="quarter" required="required">
             <option value="">--Please choose an option--</option>
-            <option value="Quarter 1">First Quarter</option> 
-            <option value="Quarter 2">Second Quarter</option>
-            <option value="Quarter 3">Third Quarter</option>
-            <option value="Quarter 4">Fouth Quarter</option>
+            <option value="Quarter1">First Quarter</option> 
+            <option value="Quarter2">Second Quarter</option>
+            <option value="Quarter3">Third Quarter</option>
+            <option value="Quarter4">Fouth Quarter</option>
+            <option value="Quarter5">Fifth Quarter</option>
             </select>
         </li>
 
@@ -83,9 +98,42 @@
 
 
         <li><label for="targeted_productivity">Targeted productivity for the day:</label>
-            <input type="number" name="targeted_productivity" placeholder="targeted productivity for the day" required="required" />
+            <input type="number" name="targeted_productivity" placeholder="targeted productivity for the day" step=".01" required="required" />
         </li>
 <!-- 9 columns remains from smv to the end-->
+
+        <li><label for="svm">Standard minute value allocated for a task:</label>
+            <input type="number" name="svm" placeholder="minute allocated for a task" step=".01" required="required" />
+        </li>
+
+        <li><label for="wip">Number of unfinished items for products:</label>
+            <input type="number" name="wip" placeholder="Number of unfinished items for products" step=".01" required="required" />
+        </li>
+
+        <li><label for="over_time">The amount of overtime by each team in minutes:</label>
+            <input type="number" name="over_time" placeholder="The amount of overtime by each team in minutes" step=".01" required="required" />
+        </li>
+
+        <li><label for="incentive">the amount of financial incentive (in BDT) that enables or motivates a particular course of action:</label>
+            <input type="number" name="incentive" placeholder="The amount of financial incentive (in BDT) that enables or motivates a particular course of action" required="required" />
+        </li>
+
+        <li><label for="idle_time">Time when the production was interrupted due to several reasons:</label>
+            <input type="number" name="idle_time" placeholder="Time when the production was interrupted due to several reasons" step=".01" required="required" />
+        </li>
+
+        <li><label for="idle_men">The number of workers who were idle due to production interruption:</label>
+            <input type="number" name="idle_men" placeholder="The number of workers who were idle due to production interruption" step=".01" required="required" />
+        </li>
+
+        <li><label for="no_of_style_change">Number of changes in the style:</label>
+            <input type="number" name="no_of_style_change" placeholder="Number of changes in the style" step=".01" required="required" />
+        </li>
+
+        <li><label for="no_of_workers">Number of workers:</label>
+            <input type="number" name="no_of_workers" placeholder="Number of workers" step=".01" required="required" />
+        </li>
+
         <!-- submit button -->
         <li><button id="submit" type="submit">Predict</button></li>
         </ul>
